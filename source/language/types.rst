@@ -329,13 +329,11 @@ operations on the field of real numbers) would be
 
    2\pi \times \frac{\text{angle_as_uint}}{2^{\text{size}}}
 
-This "mathematical" value is the value used in casts from floating-point values
-(if available), whereas casts to and from ``bit[size]`` types reinterpret the
-bits directly.  This means that, unless ``a`` is sufficiently small:
-
 .. # parse-test: skip
 
-::
+This "mathematical" value is the value used in casts from floating-point values
+(if available), whereas casts to and from ``bit[size]`` types reinterpret the
+bits directly.  This means that, unless ``a`` is sufficiently small::
 
   float[32] a;
   angle[32](bit[32](uint[32](a))) != angle[32](a)
@@ -699,12 +697,12 @@ digit of the literal to improve readability for large values.
 
    int i1 = 1; // decimal
    int i2 = 0xff; // hex
-   int i3 = 0xffff_ffff; // hex with _ for readability
+   int i3 = 0xffff_ffff // hex with _ for readability
    int i4 = 0XBEEF; // uppercase HEX
    int i5 = 0o73; // octal
    int i6 = 0b1101; // binary
    int i7 = 0B0110_1001; // uppercase B binary with _ for readability
-   int i8 = 1_000_000; // 1 million with _ for readability
+   int i8 = 1_000_000 // 1 million with _ for readability
 
 Float literals contain either
    - one or more digits followed by a ``.`` and zero or more digits,
@@ -812,9 +810,9 @@ the shape and type of the assigned value must match that of the reference.
    array[int[8], 4, 3] bb;
 
    bb[0] = aa; // all of aa is copied to first element of bb
-   bb[0, 1] = aa[2]; // last element of aa is copied to one element of bb
+   bb[0, 1] = aa[2] // last element of aa is copied to one element of bb
 
-   bb[0] = 1; // error - shape mismatch
+   bb[0] = 1 // error - shape mismatch
 
 Arrays may be passed to subroutines and externs. For more details, see
 :any:`arrays-in-subroutines`.
@@ -1013,8 +1011,8 @@ the slices must match.
    threeD[0] = twoD; // allowed
 
    threeD[0] = oneD; // error - shape mismatch
-   threeD[0, 0] = scalar; // error - shape mismatch
-   threeD = anotherThreeD; // error - shape mismatch
+   threeD[0, 0] = scalar // error - shape mismatch
+   threeD = anotherThreeD // error - shape mismatch
 
    twoD[1:2] = anotherTwoD[0:1]; // allowed
    twoD[1:2, 0] = anotherTwoD[0:1, 1]; // allowed
@@ -1128,11 +1126,11 @@ floating-point values ``inf``, ``-inf`` and all representations of ``NaN`` to
 For example, given the double-precision floating-point value::
 
    // The closest double-precision representation of 2*pi.
-   const float[64] two_pi = 6.283185307179586;
+   const float[64] two_pi = 6.283185307179586
    // For double precision, we have
    //   (two_pi * (127./512.)) / two_pi == (127./512.)
    // exactly.
-   float[64] f = two_pi * (127. / 512.);
+   float[64] f = two_pi * (127. / 512.)
 
 the result of the cast ``angle[8](f)`` should have the bitwise representation
 ``"01000000"`` (which represents the exact angle

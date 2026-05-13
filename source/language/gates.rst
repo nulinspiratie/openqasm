@@ -344,7 +344,7 @@ Built-in gates
 
       gate X q {
          U(π, 0, π) q;
-         gphase(-π/2);
+         gphase -π/2;
       }
 
       gate CX c, t {

@@ -77,7 +77,7 @@ supplied translation units.
 
 .. code-block:: openpulse
 
-    extern port drive_port0;
+    extern port drive_port0
 
 
 It is expected that a hardware vendor provide some documentation as to the associated

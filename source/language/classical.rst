@@ -55,7 +55,7 @@ respectively.
    bit[8] b = "01110000";
 
    a << 1; // Bit shift left produces "00011110"
-   rotl(a, 2); // Produces "00111110"
+   rotl(a, 2) // Produces "00111110"
    a | b; // Produces "11111111"
    a & b; // Produces "00000000"
 
@@ -267,10 +267,10 @@ block of several statements ``{ stmt1; stmt2; }``.
    bool target = false;
    qubit a;
    h a;
-   bit result = measure a;
+   bit output = measure qubit
 
    // example of branching
-   if (target == result) {
+   if (target == output) {
       // do something
    } else {
       // do something else
