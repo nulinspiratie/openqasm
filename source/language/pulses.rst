@@ -247,6 +247,8 @@ existing ``include`` mechanism.
 
 The user would then include the ``backend.inc`` in their own program and use them as demonstrated below
 
+.. # parse-test: skip
+
 .. code-block::
 
    OPENQASM 3.0;

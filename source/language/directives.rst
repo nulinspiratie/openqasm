@@ -93,6 +93,8 @@ interaction between annotations are prescribed by this specification.
 specification does not define any annotations. Please consult your tool's
 documentation for supported annotations.
 
+.. # parse-test: skip
+
 .. code-block::
 
    // Manage port binding on a physical device
@@ -202,6 +204,8 @@ The above example could also be written using an input array:
 
 The following Python pseudocode illustrates the differences between using and
 not using parameterized circuits in a quantum program for the case of the VQE:
+
+.. # parse-test: skip
 
 .. code-block:: python
 

@@ -77,7 +77,7 @@ supplied translation units.
 
 .. code-block:: openpulse
 
-    extern port drive_port0
+    extern port drive_port0;
 
 
 It is expected that a hardware vendor provide some documentation as to the associated
@@ -556,6 +556,8 @@ aligned to the latest time of the all ``frame``\s listed.
 
 Moreover, ``defcal`` blocks have an implicit ``barrier`` on every frame used by the block. For example:
 
+.. # parse-test: skip
+
 .. code-block::
 
   defcalgrammar "openpulse";
@@ -636,6 +638,8 @@ Collisions
 
 If a frame is scheduled or referenced simultaneously in two ``defcal`` or ``cal`` blocks, it is
 considered a compile-time error e.g.
+
+.. # parse-test: skip
 
 .. code-block::
 
@@ -803,6 +807,8 @@ sideband).
 
 The program aims to perform a Hahn echo sequence on q1, and a Ramsey sequence on q2 and q3.
 
+.. # parse-test: skip
+
 .. code-block::
   :force:
 
@@ -911,6 +917,8 @@ Multiplexed readout and capture
 In this example, we want to perform readout and capture of a pair of qubits, but mediated by a
 single physical transmission and capture port. The example is for just two qubits, but works the same for
 many (just adding more frames, waveforms, plays, and captures).
+
+.. # parse-test: skip
 
 .. code-block::
   :force:

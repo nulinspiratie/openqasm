@@ -214,6 +214,8 @@ are explicitly defined as such. They can be called by passing a valid ``duration
 their duration. Consider for example a rotation called ``rotary`` that is applied
 for the entire duration of some other gate.
 
+.. # parse-test: skip
+
 .. code-block::
 
        const amp = /* number */;

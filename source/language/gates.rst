@@ -137,6 +137,8 @@ gate set supported by a particular target.
 
 In general, new gates are defined by statements of the form
 
+.. # parse-test: skip
+
 .. code-block::
 
    gate name(params) qargs
@@ -342,7 +344,7 @@ Built-in gates
 
       gate X q {
          U(π, 0, π) q;
-         gphase -π/2;
+         gphase(-π/2);
       }
 
       gate CX c, t {

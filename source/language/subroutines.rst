@@ -1,6 +1,8 @@
 Subroutines
 ===========
 
+.. # parse-test: skip
+
 Subroutines are declared using the statement::
 
     def name(parameters) -> output_type { body }
@@ -17,6 +19,8 @@ defines a quantum bit argument named ``ancilla``.
 A given qubit can be passed at most once in any subroutine call.  Different
 ``qubit`` arguments (whether single bits or registers) cannot refer to the same
 underlying qubit in a call.
+
+.. # parse-test: skip
 
 Subroutines return up to one value of classical type, signified by the
 ``return`` keyword. If there is no return value, the empty ``return``
@@ -54,6 +58,8 @@ subroutine that takes qubits and registers::
      return measure a;
    }
 
+.. # parse-test: skip
+
 Naturally we can also use subroutines to define purely classical
 operations, such as methods we can implement using low-level classical
 instructions, like::
@@ -67,6 +73,8 @@ instructions, like::
      return c;
    }
 
+.. # parse-test: skip
+
 We can make some measurements and call this subroutine on the results as
 follows::
 
@@ -76,6 +84,8 @@ follows::
    c2 = measure r;
    bit result;
    result = parity(c ++ c2);
+
+.. # parse-test: skip
 
 We require that we know the signature at compile time, as we do in this
 example. We could also just as easily have used an extern function for

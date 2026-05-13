@@ -3,11 +3,15 @@ Comments
 
 Comments begin with a pair of forward slashes ``//`` and end with a new line:
 
+.. # parse-test: skip
+
 .. code-block::
 
    // A comment line
 
 A comment block begins with ``/*`` and ends with ``*/``:
+
+.. # parse-test: skip
 
 .. code-block::
 

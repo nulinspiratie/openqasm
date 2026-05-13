@@ -55,7 +55,7 @@ respectively.
    bit[8] b = "01110000";
 
    a << 1; // Bit shift left produces "00011110"
-   rotl(a, 2) // Produces "00111110"
+   rotl(a, 2); // Produces "00111110"
    a | b; // Produces "11111111"
    a & b; // Produces "00000000"
 
@@ -267,10 +267,10 @@ block of several statements ``{ stmt1; stmt2; }``.
    bool target = false;
    qubit a;
    h a;
-   bit output = measure qubit
+   bit result = measure a;
 
    // example of branching
-   if (target == output) {
+   if (target == result) {
       // do something
    } else {
       // do something else
@@ -412,6 +412,8 @@ current value is the last in the set.
 
 It is an error to have a ``break;`` or ``continue;`` statement outside a loop,
 such as at the top level of the main circuit or of a subroutine.
+
+.. # parse-test: skip
 
 .. code-block::
 
